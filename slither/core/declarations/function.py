@@ -1547,12 +1547,7 @@ class Function(SourceMapping, metaclass=ABCMeta):  # pylint: disable=too-many-pu
                     address a = msg.sender;
                     return a;
                     ```
-                - Reassignments or address conversions:
-                    ```
-                    address a = msg.sender;
-                    address b = address(uint160(a));
-                    return b;
-                    ```
+                    
             Does not cover : 
                 - Returns via internal function calls, even if those functions return `msg.sender`: 
                     ```
