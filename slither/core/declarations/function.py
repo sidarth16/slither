@@ -1594,10 +1594,6 @@ class Function(SourceMapping, metaclass=ABCMeta):  # pylint: disable=too-many-pu
                     ):
                         lval, rval = ir.lvalue.name, ir.rvalue.name
                         assignment_map[lval] = assignment_map.get(rval, rval)
-                        # if ir.rvalue.name in assignment_map:
-                        #     assignment_map[ir.lvalue.name] = assignment_map[ir.rvalue.name]
-                        # else:
-                        #     assignment_map[ir.lvalue.name] = ir.rvalue.name
 
             for var in return_vars:
                 if var not in assignment_map:
